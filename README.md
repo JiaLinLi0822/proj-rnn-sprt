@@ -1,6 +1,6 @@
 # Recurrent neural network learns early commitment as an optimal strategy for decision-making in naturalistic environments
 
-This repository contains the implementation of a recurrent neural network (RNN) model for studying decision-making in sequential sampling tasks, specifically in the context of Sequential Probability Ratio Tests (SPRT). This work is submitted to a NeurIPS ogInterp workshop: Interpreting Cognition in Deep Learning Models. It .
+This repository contains the implementation of a recurrent neural network (RNN) model for studying decision-making in sequential sampling tasks, specifically in the context of Sequential Probability Ratio Tests (SPRT). This work is submitted to a NeurIPS ogInterp workshop: Interpreting Cognition in Deep Learning Models.
 
 ## Overview
 
@@ -184,13 +184,13 @@ cd Codes
 jupyter notebook analysis.ipynb
 ```
 
-The notebook will generate figures showing:
+The notebook will generate all the figures showing in the article:
 - Decision boundaries and sampling patterns
 - Neural network decision weights
 - Comparison with optimal SPRT behavior
 - Psychometric curves and response time distributions
 
-## Key Experimental Configurations
+## Experimental Configurations
 
 The project studies three main experimental environments:
 
@@ -209,7 +209,7 @@ The project studies three main experimental environments:
 - **Max Samples**: 10 (limited)
 - **Behavior**: Strategic sampling within constraints
 
-## Expected Outputs
+## Outputs
 
 ### Training Outputs
 Each training run produces:
