@@ -1,6 +1,6 @@
-# A Recurrent Neural Network Reveals Diverse Decision Boundary of Decision-Making in Non-Stationary Environment
+# Recurrent neural network learns early commitment as an optimal strategy for decision-making in naturalistic environments
 
-This repository contains the implementation of a recurrent neural network (RNN) model for studying decision-making in sequential sampling tasks, specifically in the context of Sequential Probability Ratio Tests (SPRT). This work is submitted to a NeurIPS workshop.
+This repository contains the implementation of a recurrent neural network (RNN) model for studying decision-making in sequential sampling tasks, specifically in the context of Sequential Probability Ratio Tests (SPRT). This work is submitted to a NeurIPS ogInterp workshop: Interpreting Cognition in Deep Learning Models. It .
 
 ## Overview
 
@@ -146,7 +146,7 @@ cd Codes
 
 The script runs three predefined configurations:
 1. **env1**: Infinite horizon (low sampling cost, high max_samples)
-2. **env2**: Hard boundary (high sampling cost, high max_samples)  
+2. **env2**: Infinite horizon (high sampling cost, high max_samples)  
 3. **env3**: Soft boundary (low sampling cost, low max_samples)
 
 ## Reproducing Results
@@ -194,17 +194,17 @@ The notebook will generate figures showing:
 
 The project studies three main experimental environments:
 
-### Environment 1: Infinite Horizon
+### Environment 1: Infinite Horizon with low sampling cost
 - **Sampling Cost**: 0.01 (low)
 - **Max Samples**: 10000 (effectively unlimited)
 - **Behavior**: Near-optimal SPRT with evidence accumulation
 
-### Environment 2: Hard Boundary  
+### Environment 2: Infinite Horizon with high sampling cost
 - **Sampling Cost**: 0.05 (high)
 - **Max Samples**: 10000 (effectively unlimited)
 - **Behavior**: Early decision-making due to high sampling costs
 
-### Environment 3: Soft Boundary
+### Environment 3: Time constraint with low sampling cost
 - **Sampling Cost**: 0.01 (low)  
 - **Max Samples**: 10 (limited)
 - **Behavior**: Strategic sampling within constraints
@@ -219,7 +219,7 @@ Each training run produces:
 - `training_loss.png`: Training loss curve
 
 ### Simulation Outputs  
-- `data.json`: Detailed behavioral data including decisions, sampling patterns, and neural activations
+- `data.json`: Detailed behavioral data including decisions, sampling patterns, and (hidden states)neural activations
 
 ### Analysis Outputs
 Generated figures include:
@@ -237,19 +237,3 @@ The model uses a **SharedGRURecurrentActorCriticPolicy** with:
 - **Actor Head**: Linear layer outputting action probabilities (Choose A, Choose B, Sample)
 - **Critic Head**: Linear layer outputting state values
 - **Action Masking**: Prevents invalid actions (e.g., sampling when limit reached)
-
-## Citation
-
-If you use this code in your research, please cite:
-
-```
-[Citation information to be added upon publication]
-```
-
-## License
-
-[License information to be added]
-
-## Contact
-
-For questions about the code or research, please contact [contact information].
